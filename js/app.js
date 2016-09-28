@@ -139,6 +139,11 @@ var reverseStr = function(str) {
 
 // Put your answer below -------------------------
 
+var reverseStrOneLine = function(str){
+  return str.split('').reverse().join('');
+}
+
+console.assert(reverseStrOneLine('beer run') == 'nur reeb');
 
 // -----------------------------------------------
 
