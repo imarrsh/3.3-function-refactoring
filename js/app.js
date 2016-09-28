@@ -347,7 +347,25 @@ var accelerate = function(amount) {
 
 // Put your answer below -------------------------
 
+/*
+  speed is set to NaN because the function is
+  trying to update speed with an undefined value
+  when a value isnt provided in the function call.
 
+  We can explicitly check for a number value by
+  checking the type of amount and reject any value
+  that isnt a number
+*/
+
+var accelerateAgain = function(amount){
+
+  if(typeof amount == 'number'){
+    speed += amount;
+  } else {
+    console.warn('Speed must be a number!');
+  }
+
+}
 
 // -----------------------------------------------
 
