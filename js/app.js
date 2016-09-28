@@ -30,6 +30,13 @@ function doSomethingCool() {
 // Put your answer below -------------------------
 
 
+var doSomethingCoolAnswer = function(){
+  console.log('Something Cool in a anon function!');
+}
+
+// doSomethingCoolAnswer();
+
+
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
