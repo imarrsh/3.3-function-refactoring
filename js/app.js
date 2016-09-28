@@ -179,7 +179,7 @@ var spanishColor = function(colorName) {
 // Put your answer below -------------------------
 
 var spanishColorObj = function(colorName){
-
+  colorName = colorName.toLowerCase();
   var colors = {
     'rojo': '#ff0000',
     'blanco': '#ffffff',
@@ -244,6 +244,7 @@ var callNtimes = function(callback, n) {
   for(var i = 0; i < n; i++){
     callback();
   }
+  return false; // should we do this?
 }
 
 function callMeMaybe(){
@@ -279,6 +280,7 @@ var decreaseScore = function() {
 
 // Put your answer below -------------------------
 
+// put the code in an IIFE
 (function(){
 
   var score = 0;
@@ -312,6 +314,13 @@ var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
 
+function addNumbersAgain(numA, numB){
+  return numA + numB;
+};
+
+var fourPlusFour = addNumbersAgain(4, 4);
+
+console.assert(fourPlusFour == 8);
 
 // -----------------------------------------------
 
@@ -337,6 +346,7 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
+
 
 
 // -----------------------------------------------
