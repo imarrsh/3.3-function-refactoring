@@ -56,6 +56,11 @@ setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
 
+var sayHiAgain = function(){
+  alert('Hello, World! - from anon function!');
+}
+
+setTimeout(sayHiAgain, 2000);
 
 // -----------------------------------------------
 
