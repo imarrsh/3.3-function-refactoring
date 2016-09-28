@@ -240,6 +240,17 @@ var callTenTimes = function(callback) {
 
 // Put your answer below -------------------------
 
+var callNtimes = function(callback, n) {
+  for(var i = 0; i < n; i++){
+    callback();
+  }
+}
+
+function callMeMaybe(){
+  console.log('This is crazy!');
+}
+
+console.log(callNtimes(callMeMaybe, 20));
 
 // -----------------------------------------------
 
