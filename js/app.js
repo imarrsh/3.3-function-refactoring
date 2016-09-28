@@ -32,7 +32,7 @@ function doSomethingCool() {
 
 var doSomethingCoolAnswer = function(){
   console.log('Something Cool in a anon function!');
-}
+};
 
 // doSomethingCoolAnswer();
 
@@ -91,6 +91,32 @@ console.log("The letter is", letter);
 
 // Put your answer below -------------------------
 
+/*
+  [c]: z then y
+
+  letter is being declared first and the declaration hoisted up to the top.
+
+  it then is assigned the value of 'x'.
+
+  when then make a call to the native setTimeout() function and pass a function
+  expression into it. inside of the function expression, we set the value of
+  letter to 'y' and log a message to the console that includes information on
+  what letter is being changed to. the time argument of 1 sets a timer that will wait 1ms
+  to fire the function to change the value of letter
+
+  While we're wating on setTimeout to fire, we re-assign the value of letter to 'z'
+  and log a message that has information on what letter is now assigned to at this
+  point in our file. this is why we dont see 'x' being logged to the console -
+  letter is reassigned before we ever try to extract that information. if we
+  console logged the value in letter before we re-assigned it to 'z', we would
+  see 'x' in the console.
+
+  setTimeout finally fires and re-assigns letter to 'y' and even though we
+  assinged letter to 'z' after the setTimeout, the last thing that we see in the
+  console is that letter is assigned to 'y' because we told the browser to wait
+  1 millisecond before re-assigning letter to 'y'
+
+*/
 
 // -----------------------------------------------
 
