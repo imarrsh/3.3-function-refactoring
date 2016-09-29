@@ -58,7 +58,7 @@ setTimeout(sayHi, 2000);
 
 var sayHiAgain = function(){
   alert('Hello, World! - from anon function!');
-}
+};
 
 setTimeout(sayHiAgain, 2000);
 
@@ -141,7 +141,7 @@ var reverseStr = function(str) {
 
 var reverseStrOneLine = function(str){
   return str.split('').reverse().join('');
-}
+};
 
 console.assert(reverseStrOneLine('beer run') == 'nur reeb');
 
@@ -186,10 +186,10 @@ var spanishColorObj = function(colorName){
     'azul': '#0000ff',
     'verde': '#00ff00',
     'negro': '#000000'
-  }
+  };
 
   return colors[colorName];
-}
+};
 
 // console.log(spanishColorObj('verde'));
 console.assert(spanishColorObj('verde') == '#00ff00');
@@ -245,7 +245,7 @@ var callNtimes = function(callback, n) {
     callback();
   }
   return false; // should we do this?
-}
+};
 
 function callMeMaybe(){
   console.log('This is crazy!');
@@ -316,7 +316,7 @@ var twoPlusTwo = addNumbers(2,2);
 
 function addNumbersAgain(numA, numB){
   return numA + numB;
-};
+}
 
 var fourPlusFour = addNumbersAgain(4, 4);
 
@@ -367,7 +367,7 @@ var accelerateAgain = function(amount){
     speed += amount;
   }
 
-}
+};
 
 // -----------------------------------------------
 
