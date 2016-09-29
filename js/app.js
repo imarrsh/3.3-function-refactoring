@@ -363,6 +363,8 @@ var accelerateAgain = function(amount){
     speed += amount;
   } else {
     console.warn('Speed must be a number!');
+    amount = 1;
+    speed += amount;
   }
 
 }
@@ -409,6 +411,28 @@ var callLater = function(timeout, callback) {
 
 // Put your answer below -------------------------
 
+var callLater = function(timeout, callback) {
+  // this will only handle a function coming into the timeout slot
+  // by itself, but not much else
+  if(typeof timeout == 'function'){
+    callback = timeout;
+    timeout = 1000;
+  }
+
+  setTimeout(callback, timeout);
+
+};
+
+
+function calledLater(){
+  console.log('Bro, you showed up late.');
+}
+
+callLater(3000, calledLater); // should work normally
+
+callLater(calledLater); // should still work, but need set a default
+// var a = {};
+// callLater(a, calledLater);
 
 // -----------------------------------------------
 
